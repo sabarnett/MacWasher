@@ -8,16 +8,29 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+    /// Closes the application when the viewer window is closed.
+    ///
+    /// - Parameter sender: The application
+    /// - Returns: Returns true, so the app closes with the window
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    /// Displays the about box.
+    ///
+    /// The about box is stored in a separate storyboard so as to isolate it from
+    /// the main storybord where the action hgappens.
+    ///
+    /// - Parameter sender: The sender will be the menu item.
+    @IBAction func showAbout(_ sender: Any) {
+        let storyboard = NSStoryboard(name: NSStoryboard.Name("AboutMacWasher"), bundle: nil)
+
+        if let aboutController = storyboard.instantiateInitialController() as? NSWindowController {
+            if let aboutView = aboutController.contentViewController as? AboutBoxViewController {
+
+                aboutView.presentAsModalWindow(aboutView)
+            }
+        }
     }
-
-
 }
 

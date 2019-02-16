@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E806761E22173F8A00D29DE8 /* AboutBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E806761D22173F8A00D29DE8 /* AboutBoxViewController.swift */; };
 		E881B8862212F9890026EE7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881B8852212F9890026EE7D /* AppDelegate.swift */; };
 		E881B8882212F9890026EE7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881B8872212F9890026EE7D /* ViewController.swift */; };
 		E881B88A2212F98A0026EE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E881B8892212F98A0026EE7D /* Assets.xcassets */; };
 		E881B88D2212F98A0026EE7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E881B88B2212F98A0026EE7D /* Main.storyboard */; };
+		E89DE4192216EA8A00E27E41 /* AboutMacWasher.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89DE4182216EA8A00E27E41 /* AboutMacWasher.storyboard */; };
+		E8A3434322144D130051E3DB /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3434222144D130051E3DB /* WindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E806761D22173F8A00D29DE8 /* AboutBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBoxViewController.swift; sourceTree = "<group>"; };
 		E881B8822212F9890026EE7D /* MacWasher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacWasher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E881B8852212F9890026EE7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E881B8872212F9890026EE7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +25,8 @@
 		E881B88C2212F98A0026EE7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E881B88E2212F98A0026EE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E881B88F2212F98A0026EE7D /* MacWasher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacWasher.entitlements; sourceTree = "<group>"; };
+		E89DE4182216EA8A00E27E41 /* AboutMacWasher.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutMacWasher.storyboard; sourceTree = "<group>"; };
+		E8A3434222144D130051E3DB /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,11 +40,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E806761F2217446500D29DE8 /* MainWindow */ = {
+			isa = PBXGroup;
+			children = (
+				E881B88B2212F98A0026EE7D /* Main.storyboard */,
+				E881B8872212F9890026EE7D /* ViewController.swift */,
+				E8A3434222144D130051E3DB /* WindowController.swift */,
+			);
+			path = MainWindow;
+			sourceTree = "<group>";
+		};
 		E881B8792212F9890026EE7D = {
 			isa = PBXGroup;
 			children = (
 				E881B8842212F9890026EE7D /* MacWasher */,
 				E881B8832212F9890026EE7D /* Products */,
+				E881B895221302370026EE7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +70,30 @@
 		E881B8842212F9890026EE7D /* MacWasher */ = {
 			isa = PBXGroup;
 			children = (
+				E806761F2217446500D29DE8 /* MainWindow */,
+				E89DE4172216EA7200E27E41 /* AboutBox */,
 				E881B8852212F9890026EE7D /* AppDelegate.swift */,
-				E881B8872212F9890026EE7D /* ViewController.swift */,
 				E881B8892212F98A0026EE7D /* Assets.xcassets */,
-				E881B88B2212F98A0026EE7D /* Main.storyboard */,
 				E881B88E2212F98A0026EE7D /* Info.plist */,
 				E881B88F2212F98A0026EE7D /* MacWasher.entitlements */,
 			);
 			path = MacWasher;
+			sourceTree = "<group>";
+		};
+		E881B895221302370026EE7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E89DE4172216EA7200E27E41 /* AboutBox */ = {
+			isa = PBXGroup;
+			children = (
+				E89DE4182216EA8A00E27E41 /* AboutMacWasher.storyboard */,
+				E806761D22173F8A00D29DE8 /* AboutBoxViewController.swift */,
+			);
+			path = AboutBox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +128,14 @@
 				TargetAttributes = {
 					E881B8812212F9890026EE7D = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.NetworkExtensions = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E881B88A2212F98A0026EE7D /* Assets.xcassets in Resources */,
+				E89DE4192216EA8A00E27E41 /* AboutMacWasher.storyboard in Resources */,
 				E881B88D2212F98A0026EE7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E881B8882212F9890026EE7D /* ViewController.swift in Sources */,
+				E8A3434322144D130051E3DB /* WindowController.swift in Sources */,
+				E806761E22173F8A00D29DE8 /* AboutBoxViewController.swift in Sources */,
 				E881B8862212F9890026EE7D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

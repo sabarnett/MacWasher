@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="qz4-h9-vXp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="6RA-fa-taj">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="qz4-h9-vXp" sceneMemberID="viewController">
+                    <window key="window" title="AboutBox" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titleVisibility="hidden" id="TFt-RC-xY9">
+                        <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="245" y="301" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="qz4-h9-vXp" id="BfT-HV-XO3"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="1EQ-cO-ONr" kind="relationship" relationship="window.shadowedContentViewController" id="uGI-ap-50N"/>
+                    </connections>
+                </windowController>
+                <customObject id="IuS-Gm-ZkP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-21" y="158"/>
+        </scene>
+        <!--About MacWasher-->
+        <scene sceneID="bKS-HI-tvg">
+            <objects>
+                <viewController title="About MacWasher" showSeguePresentationStyle="single" id="1EQ-cO-ONr" customClass="AboutBoxViewController" customModule="MacWasher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="ljZ-d3-b1U">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yu1-1v-SO3">
+                                <rect key="frame" x="388" y="13" width="75" height="32"/>
+                                <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gmA-Cg-wrv">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="closeButtonClicked:" target="1EQ-cO-ONr" id="m2d-34-EVL"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="loE-W2-HL3">
+                                <rect key="frame" x="20" y="123" width="140" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="IXE-9s-77i"/>
+                                    <constraint firstAttribute="width" constant="140" id="o8t-QG-eTg"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="MacWasher" id="e8r-1b-TlR"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4xX-9r-JOD">
+                                <rect key="frame" x="233" y="189" width="207" height="48"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="MacWasher" id="ZaE-9g-bzA">
+                                    <font key="font" metaFont="system" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VLg-bR-Bun">
+                                <rect key="frame" x="242" y="104" width="189" height="51"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="wXP-TS-AiN">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">This program is based around
+ Mailwasher Mobile
+from</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kbf-FE-Y3U">
+                                <rect key="frame" x="216" y="85" width="241" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="602-Nf-flx"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Firetrust, the makers of Mailwasher Pro" id="FiQ-kJ-mBZ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RUy-XV-gQ1">
+                                <rect key="frame" x="203" y="175" width="267" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="This program is copyright © Steven Barnett" id="u1J-v8-48s">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="yu1-1v-SO3" firstAttribute="top" secondItem="Kbf-FE-Y3U" secondAttribute="bottom" constant="44" id="0d0-Es-iMJ"/>
+                            <constraint firstItem="RUy-XV-gQ1" firstAttribute="centerX" secondItem="4xX-9r-JOD" secondAttribute="centerX" id="40K-cN-4NX"/>
+                            <constraint firstAttribute="trailing" secondItem="RUy-XV-gQ1" secondAttribute="trailing" constant="12" id="9eZ-d5-Vn7"/>
+                            <constraint firstItem="Kbf-FE-Y3U" firstAttribute="top" secondItem="VLg-bR-Bun" secondAttribute="bottom" constant="2" id="CU8-31-LlR"/>
+                            <constraint firstItem="VLg-bR-Bun" firstAttribute="top" secondItem="RUy-XV-gQ1" secondAttribute="bottom" constant="20" id="J0k-03-xyA"/>
+                            <constraint firstItem="loE-W2-HL3" firstAttribute="leading" secondItem="ljZ-d3-b1U" secondAttribute="leading" constant="20" symbolic="YES" id="ODT-Zm-hEd"/>
+                            <constraint firstItem="RUy-XV-gQ1" firstAttribute="centerX" secondItem="Kbf-FE-Y3U" secondAttribute="centerX" id="TYB-UF-Ehv"/>
+                            <constraint firstItem="4xX-9r-JOD" firstAttribute="leading" secondItem="loE-W2-HL3" secondAttribute="trailing" constant="75" id="VQF-zt-etv"/>
+                            <constraint firstItem="RUy-XV-gQ1" firstAttribute="centerX" secondItem="VLg-bR-Bun" secondAttribute="centerX" id="Xyz-ff-IsV"/>
+                            <constraint firstItem="RUy-XV-gQ1" firstAttribute="top" secondItem="ljZ-d3-b1U" secondAttribute="top" constant="78" id="bJd-yK-08S"/>
+                            <constraint firstItem="loE-W2-HL3" firstAttribute="top" secondItem="ljZ-d3-b1U" secondAttribute="top" constant="20" symbolic="YES" id="cnp-h3-k7F"/>
+                            <constraint firstAttribute="trailing" secondItem="Kbf-FE-Y3U" secondAttribute="trailing" constant="25" id="eyb-7H-hUU"/>
+                            <constraint firstItem="VLg-bR-Bun" firstAttribute="top" secondItem="4xX-9r-JOD" secondAttribute="bottom" constant="34" id="m56-wO-ugV"/>
+                            <constraint firstAttribute="trailing" secondItem="yu1-1v-SO3" secondAttribute="trailing" constant="23" id="mGJ-iH-doB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="cq1-Qu-1Ow" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688" y="150"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MacWasher" width="256" height="256"/>
+    </resources>
+</document>
