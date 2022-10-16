@@ -25,10 +25,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func showAbout(_ sender: Any) {
         let storyboard = NSStoryboard(name: NSStoryboard.Name("AboutMacWasher"), bundle: nil)
 
-        if let aboutController = storyboard.instantiateInitialController() as? NSWindowController {
-            if let aboutView = aboutController.contentViewController as? AboutBoxViewController {
+        if let aboutController = storyboard.instantiateController(withIdentifier: "AboutBoxWindow") as? AboutBoxWindowController {
 
-                aboutView.presentAsModalWindow(aboutView)
+            if let _ = aboutController.contentViewController as? AboutBoxViewController {
+
+                let app = NSApplication.shared
+                app.runModal(for: aboutController.window!)
             }
         }
     }

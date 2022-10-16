@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E806761E22173F8A00D29DE8 /* AboutBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E806761D22173F8A00D29DE8 /* AboutBoxViewController.swift */; };
+		E80D8FC222428EF800BFBFE8 /* AboutBoxWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80D8FC122428EF800BFBFE8 /* AboutBoxWindowController.swift */; };
 		E881B8862212F9890026EE7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881B8852212F9890026EE7D /* AppDelegate.swift */; };
 		E881B8882212F9890026EE7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881B8872212F9890026EE7D /* ViewController.swift */; };
 		E881B88A2212F98A0026EE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E881B8892212F98A0026EE7D /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		E806761D22173F8A00D29DE8 /* AboutBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBoxViewController.swift; sourceTree = "<group>"; };
+		E80D8FC122428EF800BFBFE8 /* AboutBoxWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutBoxWindowController.swift; sourceTree = "<group>"; };
 		E881B8822212F9890026EE7D /* MacWasher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacWasher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E881B8852212F9890026EE7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E881B8872212F9890026EE7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,8 +72,8 @@
 		E881B8842212F9890026EE7D /* MacWasher */ = {
 			isa = PBXGroup;
 			children = (
+				E8ABB6652242A2B200E1928D /* Dialogs */,
 				E806761F2217446500D29DE8 /* MainWindow */,
-				E89DE4172216EA7200E27E41 /* AboutBox */,
 				E881B8852212F9890026EE7D /* AppDelegate.swift */,
 				E881B8892212F98A0026EE7D /* Assets.xcassets */,
 				E881B88E2212F98A0026EE7D /* Info.plist */,
@@ -92,8 +94,17 @@
 			children = (
 				E89DE4182216EA8A00E27E41 /* AboutMacWasher.storyboard */,
 				E806761D22173F8A00D29DE8 /* AboutBoxViewController.swift */,
+				E80D8FC122428EF800BFBFE8 /* AboutBoxWindowController.swift */,
 			);
 			path = AboutBox;
+			sourceTree = "<group>";
+		};
+		E8ABB6652242A2B200E1928D /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				E89DE4172216EA7200E27E41 /* AboutBox */,
+			);
+			path = Dialogs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				E8A3434322144D130051E3DB /* WindowController.swift in Sources */,
 				E806761E22173F8A00D29DE8 /* AboutBoxViewController.swift in Sources */,
 				E881B8862212F9890026EE7D /* AppDelegate.swift in Sources */,
+				E80D8FC222428EF800BFBFE8 /* AboutBoxWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +336,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = theoldbloke.com.MacWasher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theoldbloke.MacWasher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -343,7 +355,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = theoldbloke.com.MacWasher;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theoldbloke.MacWasher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};

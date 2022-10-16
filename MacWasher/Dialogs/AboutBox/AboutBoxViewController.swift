@@ -9,10 +9,10 @@ class AboutBoxViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
     }
     
     @IBAction func closeButtonClicked(_ sender: NSButton) {
-        self.dismiss(self)
+        NSApplication.shared.stopModal()
+        self.view.window?.close()
     }
 }

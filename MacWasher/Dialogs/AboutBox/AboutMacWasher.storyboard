@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="qz4-h9-vXp">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="qz4-h9-vXp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Window Controller-->
         <scene sceneID="6RA-fa-taj">
             <objects>
-                <windowController showSeguePresentationStyle="single" id="qz4-h9-vXp" sceneMemberID="viewController">
-                    <window key="window" title="AboutBox" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titleVisibility="hidden" id="TFt-RC-xY9">
+                <windowController storyboardIdentifier="AboutBoxWindow" showSeguePresentationStyle="single" id="qz4-h9-vXp" customClass="AboutBoxWindowController" customModule="MacWasher" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" hasShadow="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="TFt-RC-xY9">
+                        <windowStyleMask key="styleMask" titled="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="245" y="301" width="480" height="270"/>
@@ -35,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yu1-1v-SO3">
-                                <rect key="frame" x="388" y="13" width="75" height="32"/>
+                                <rect key="frame" x="395" y="19" width="69" height="32"/>
                                 <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gmA-Cg-wrv">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -53,7 +55,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="MacWasher" id="e8r-1b-TlR"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4xX-9r-JOD">
-                                <rect key="frame" x="233" y="189" width="207" height="48"/>
+                                <rect key="frame" x="233" y="190" width="207" height="47"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="MacWasher" id="ZaE-9g-bzA">
                                     <font key="font" metaFont="system" size="40"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -61,7 +63,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VLg-bR-Bun">
-                                <rect key="frame" x="242" y="104" width="189" height="51"/>
+                                <rect key="frame" x="242" y="108" width="189" height="48"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="wXP-TS-AiN">
                                     <font key="font" metaFont="system"/>
                                     <string key="title">This program is based around
@@ -72,7 +74,7 @@ from</string>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Kbf-FE-Y3U">
-                                <rect key="frame" x="216" y="85" width="241" height="17"/>
+                                <rect key="frame" x="216" y="90" width="241" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="237" id="602-Nf-flx"/>
                                 </constraints>
@@ -83,7 +85,7 @@ from</string>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RUy-XV-gQ1">
-                                <rect key="frame" x="203" y="175" width="267" height="17"/>
+                                <rect key="frame" x="203" y="176" width="267" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="This program is copyright © Steven Barnett" id="u1J-v8-48s">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
